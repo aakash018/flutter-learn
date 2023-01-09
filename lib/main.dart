@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:test/practice/Caller.dart';
+import 'package:test/practice/Cards.dart';
 import 'package:test/practice/container.dart';
 import 'package:test/practice/profile.dart';
 
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.pink,
       ),
-      home: const Profile(),
+      home: const Caller(),
       debugShowCheckedModeBanner: false,
     );
   }
