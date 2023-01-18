@@ -14,7 +14,7 @@ class Caller extends StatelessWidget {
       body: Container(
         child: Column(
           children: [
-            const SizedBox(height: 20),
+            const SizedBox(height: 40),
             // ignore: prefer_const_literals_to_create_immutables
             Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
               const OptionsHolder(
@@ -28,7 +28,7 @@ class Caller extends StatelessWidget {
                 color: Color.fromARGB(255, 28, 112, 236),
               ),
               const OptionsHolder(
-                icon: Icons.video_call,
+                icon: Icons.videocam,
                 label: "video-call",
                 color: Color.fromARGB(255, 28, 112, 236),
               ),
@@ -40,7 +40,31 @@ class Caller extends StatelessWidget {
             ]),
 
             const SizedBox(height: 10),
-            const NotificationContainer()
+            const NotificationContainer(),
+            const SizedBox(
+              height: 50,
+            ),
+            //? Checked Button
+            Row(
+              children: [
+                Checkbox(
+                  value: true,
+                  onChanged: (bool) => print(bool),
+                ),
+                const Text("Rembember Me")
+              ],
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            //? ElebatedButton
+            ElevatedButton(
+                onPressed: () => Navigator.pushNamed(context, "/profile"),
+                child: const Text("Call History")),
+
+            TextButton(
+                onPressed: () => Navigator.pushNamed(context, "/alert"),
+                child: const Text("Go to alerts"))
           ],
         ),
       ),

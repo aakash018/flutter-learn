@@ -86,7 +86,12 @@ class Profile extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               Text("I love Bills",
-                  style: GoogleFonts.raleway(fontSize: 20, color: Colors.white))
+                  style:
+                      GoogleFonts.raleway(fontSize: 20, color: Colors.white)),
+              const SizedBox(height: 40),
+              TextButton(
+                  onPressed: () => Navigator.pop(context),
+                  child: const Text("Go to caller"))
             ],
           ),
         ));
